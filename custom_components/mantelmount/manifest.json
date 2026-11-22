@@ -1,0 +1,13 @@
+{
+  "domain": "mantelmount",
+  "name": "MantelMount",
+  "codeowners": ["@tkadauke"],
+  "config_flow": true,
+  "dhcp": [{ "hostname": "mantelmount_*" }],
+  "documentation": "https://github.com/tkadauke/ha-mantelmount",
+  "integration_type": "device",
+  "iot_class": "local_polling",
+  "issue_tracker": "https://github.com/tkadauke/ha-mantelmount/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

@@ -1,0 +1,95 @@
+{
+  "config": {
+    "flow_title": "{name}",
+    "step": {
+      "user": {
+        "description": "Enter the address of the MantelMount network adapter.",
+        "data": {
+          "host": "Host"
+        },
+        "data_description": {
+          "host": "IP address or host name of the mount, for example 10.0.0.20."
+        }
+      },
+      "discovery_confirm": {
+        "description": "Add {name} at {host}?"
+      },
+      "reconfigure": {
+        "description": "Enter the new address of the MantelMount network adapter.",
+        "data": {
+          "host": "Host"
+        },
+        "data_description": {
+          "host": "IP address or host name of the mount, for example 10.0.0.20."
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "The mount did not answer. Check the address and that UDP port 81 and HTTP port 80 are reachable."
+    },
+    "abort": {
+      "already_configured": "This mount is already configured.",
+      "cannot_connect": "The mount did not answer.",
+      "reconfigure_successful": "The mount's address was updated.",
+      "wrong_device": "That address belongs to a different mount."
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "tv": { "name": "TV" },
+      "moving": { "name": "Moving" },
+      "home": { "name": "At home position" },
+      "position_lost": { "name": "Position lost" }
+    },
+    "button": {
+      "home": { "name": "Home" },
+      "stop": { "name": "Stop" },
+      "jog_up": { "name": "Jog up" },
+      "jog_down": { "name": "Jog down" },
+      "jog_left": { "name": "Jog left" },
+      "jog_right": { "name": "Jog right" },
+      "recall_preset": { "name": "Recall preset {preset}" },
+      "save_preset": { "name": "Save preset {preset}" }
+    },
+    "number": {
+      "tv_on_threshold": { "name": "ALPS TV on threshold" },
+      "tv_off_threshold": { "name": "ALPS TV off threshold" }
+    },
+    "select": {
+      "smooth_start": {
+        "name": "Smooth start",
+        "state": {
+          "none": "None",
+          "minimum": "Minimum",
+          "medium": "Medium",
+          "maximum": "Maximum"
+        }
+      }
+    },
+    "sensor": {
+      "elevation": { "name": "Elevation" },
+      "azimuth": { "name": "Swivel" },
+      "tv_current": { "name": "TV current" },
+      "temperature_status": { "name": "Temperature status" },
+      "temperature_reading": { "name": "Temperature reading" },
+      "error_code": { "name": "Error code" },
+      "last_preset": { "name": "Last preset" },
+      "last_event_source": { "name": "Last command source" },
+      "left_actuator": { "name": "Left actuator" },
+      "right_actuator": { "name": "Right actuator" },
+      "left_motor_current": { "name": "Left motor current" },
+      "right_motor_current": { "name": "Right motor current" }
+    },
+    "switch": {
+      "alps": { "name": "ALPS" }
+    }
+  },
+  "exceptions": {
+    "communication_error": {
+      "message": "The mount did not respond: {error}"
+    },
+    "invalid_value": {
+      "message": "The mount rejected the value: {error}"
+    }
+  }
+}
